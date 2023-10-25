@@ -4,8 +4,37 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        "custom-light": "10px 10px 30px rgba(0, 0, 0, 0.1)",
+        'i-yellow': '0px -0.5rem 0px #CC8B13 inset',
+        'i-blue': '0px -0.5rem 0px #118C87 inset',
+        'i-yellow-s': '0px -0.25rem 0px #CC8B13 inset',
+        'i-blue-s': '0px -0.25rem 0px #6B8997 inset',
       },
+      fontFamily: {
+        'outfit': ['Outfit', 'sans-serif'], // Define 'Outfit' as a font-family
+      },
+      fontSize: {
+        'heading-l': ['40px', {
+          letterSpacing: '2.5px',
+          fontWeight: 'bold',
+          lineHeight: '48px',
+        }],
+        'heading-m': ['24px', {
+          letterSpacing: '1.5px',
+          fontWeight: 'bold',
+          lineHeight: '30px',
+        }],
+        'heading-s': ['20px', {
+          letterSpacing: '1.25px',
+          fontWeight: 'bold',
+          lineHeight: '24px',
+        }],
+        'body': ['1.125rem', {
+          letterSpacing: '15px',
+          fontWeight: 500,
+          lineHeight: '30px',
+        }],
+      },
+    
       screens: {
         sm: "450px",
         md: "768px", // Change this to your desired value
@@ -15,20 +44,18 @@ export default {
       },
 
       colors: {
-        primary: {
-          DEFAULT: "hsl(4, 100%, 67%)",
-        },
-        neutral: {
-          DEFAULT: "hsl(234, 29%, 20%)",
-          dark: "hsl(235, 18%, 26%)",
-          grey: "hsl(231, 7%, 60%)",
-          white: "hsl(0, 0%, 100%)",
-        },
-
-        
+        "cd-navy": "#1A2A33",
+        "cl-blue": "#31C3BD",
+        "cl-blue-h": "#65E9E4",
+        "cl-silver-h": "#DBE8ED",
+        "cl-silver": "#A8BFC9",
+        "cd-semi-navy": "#1F3641",
+        "cl-yellow-h": "#FFC860",
+        "cl-yellow": "#F2B137",
       },
     },
   },
   plugins: [],
 };
+
 
