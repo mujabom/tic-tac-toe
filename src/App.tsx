@@ -12,8 +12,8 @@ export default function App() {
 function NewGameMenu() {
   return (
     <div className="">
-      <Button variant="primary" color="blue" className="w-[210px] h-[57px] ">
-        <span>BUTTON</span>
+      <Button variant="secondary" color="blue" className="">
+        SECONDARY BUTTON 2
         </Button>
     </div>
   );

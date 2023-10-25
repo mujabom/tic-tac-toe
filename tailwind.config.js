@@ -28,6 +28,11 @@ export default {
           fontWeight: 'bold',
           lineHeight: '24px',
         }],
+        'heading-xs': ['16px', {
+          letterSpacing: '1px',
+          fontWeight: 'bold',
+          lineHeight: '20px',
+        }],
         'body': ['1.125rem', {
           letterSpacing: '15px',
           fontWeight: 500,
