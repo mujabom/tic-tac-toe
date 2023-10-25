@@ -1,8 +1,8 @@
 import iconx from '../asset/icon-x.svg'
 import iconxOutline from '../asset/icon-x-outline.svg'
 
-export default function X({variant = 'normal'}: {variant?: "normal" | "outline"}) {
+export default function X({variant = 'normal',className}: {variant?: "normal" | "outline",className?:string}) {
     return (
-       <img  src={variant === 'normal' ? iconx : iconxOutline}/>
+       <img className={className} src={variant === 'normal' ? iconx : iconxOutline}/>
     )
 }

@@ -6,6 +6,8 @@ export default {
       boxShadow: {
         'i-yellow': '0px -0.5rem 0px #CC8B13 inset',
         'i-blue': '0px -0.5rem 0px #118C87 inset',
+        'i-navy': '0px -0.5rem 0px #10212A inset',
+        'i-navy-s': '0px -0.25rem 0px #10212A inset',
         'i-yellow-s': '0px -0.25rem 0px #CC8B13 inset',
         'i-blue-s': '0px -0.25rem 0px #6B8997 inset',
       },
@@ -15,27 +17,27 @@ export default {
       fontSize: {
         'heading-l': ['40px', {
           letterSpacing: '2.5px',
-          fontWeight: 'bold',
+          fontWeight: 700,
           lineHeight: '48px',
         }],
         'heading-m': ['24px', {
           letterSpacing: '1.5px',
-          fontWeight: 'bold',
+          fontWeight: 700,
           lineHeight: '30px',
         }],
         'heading-s': ['20px', {
           letterSpacing: '1.25px',
-          fontWeight: 'bold',
+          fontWeight: 700,
           lineHeight: '24px',
         }],
         'heading-xs': ['16px', {
           letterSpacing: '1px',
-          fontWeight: 'bold',
+          fontWeight: 700,
           lineHeight: '20px',
         }],
-        'body': ['1.125rem', {
-          letterSpacing: '15px',
-          fontWeight: 500,
+        'body': ['14px', {
+          letterSpacing: '0.8px',
+          fontWeight: 400,
           lineHeight: '30px',
         }],
       },

@@ -19,7 +19,9 @@ export default function Button({
       : "bg-cl-silver hover:bg-cl-silver-h";
 
   const variantClass =
-    variant === "primary" ? "text-heading-s rounded-3xl pb-2" : "text-heading-xs  p-3 rounded-[0.6rem] pb-4";
+    variant === "primary"
+      ? "text-heading-s rounded-2xl pb-2 w-[29rem] h-[4.3rem]"
+      : "text-heading-xs  p-3 rounded-[0.6rem] pb-4";
 
   function getShadow() {
     if (color === "yellow") {
@@ -30,10 +32,7 @@ export default function Button({
 
   return (
     <button
-      className={`${className} ${colorClass} ${variantClass} ${getShadow()} text-cd-navy  
-      
-    
-    `}
+      className={`${className} ${colorClass} ${variantClass} ${getShadow()}  text-cd-navy`}
       {...props}
     >
       {children}
