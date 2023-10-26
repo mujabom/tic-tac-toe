@@ -4,3 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.xo-menu {
+  @apply w-1/2 flex justify-center p-3 rounded-xl;
+}
+
+.xo-menu.active {
+  @apply text-cd-navy bg-cl-silver;
+}
+
+.xo-menu.inactive {
+  @apply text-cl-silver hover:bg-cd-semi-navy;
+}
