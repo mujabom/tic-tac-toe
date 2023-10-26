@@ -20,7 +20,7 @@ export default function Button({
 
   const variantClass =
     variant === "primary"
-      ? "text-heading-s rounded-2xl pb-2 w-[29rem] h-[4.3rem]"
+      ? "text-heading-s rounded-2xl pb-2 w-[29rem] h-[4.3rem] max-w-full"
       : "text-heading-xs  p-3 rounded-[0.6rem] pb-4";
 
   function getShadow() {
