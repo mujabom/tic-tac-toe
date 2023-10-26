@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .xo-menu {
-  @apply w-1/2 flex justify-center p-3 rounded-xl;
+  @apply flex justify-center w-1/2 p-3 rounded-xl;
 }
 
 .xo-menu.active {
@@ -14,5 +14,36 @@
 
 .xo-menu.inactive {
   @apply text-cl-silver hover:bg-cd-semi-navy;
+}
+
+@media (max-width: 500px) {
+  .text-heading-l {
+    font-size: 1.125rem;
+    letter-spacing: 0.15625rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+}
+
+.text-heading-m {
+    font-size: 1.125rem;
+    letter-spacing: 0.09375rem;
+    font-weight: 700;
+    line-height: 1.40625rem;
+}
+
+.text-heading-s {
+    font-size: 0.9375rem;
+    letter-spacing: 0.078125rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+}
+
+.text-heading-xs {
+    font-size: 0.75rem;
+    letter-spacing: 0.0625rem;
+    font-weight: 700;
+    line-height: 0.9375rem;
+}
+
 }
 

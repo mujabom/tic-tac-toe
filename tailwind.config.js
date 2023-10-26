@@ -4,44 +4,59 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'i-yellow': '0px -0.5rem 0px #CC8B13 inset',
-        'i-blue': '0px -0.5rem 0px #118C87 inset',
-        'i-navy': '0px -0.5rem 0px #10212A inset',
-        'i-navy-s': '0px -0.25rem 0px #10212A inset',
-        'i-yellow-s': '0px -0.25rem 0px #CC8B13 inset',
-        'i-blue-s': '0px -0.25rem 0px #6B8997 inset',
+        "i-yellow": "0px -0.5rem 0px #CC8B13 inset",
+        "i-blue": "0px -0.5rem 0px #118C87 inset",
+        "i-navy": "0px -0.5rem 0px #10212A inset",
+        "i-navy-s": "0px -0.25rem 0px #10212A inset",
+        "i-yellow-s": "0px -0.25rem 0px #CC8B13 inset",
+        "i-blue-s": "0px -0.25rem 0px #6B8997 inset",
       },
       fontFamily: {
-        'outfit': ['Outfit', 'sans-serif'], // Define 'Outfit' as a font-family
+        outfit: ["Outfit", "sans-serif"], // Define 'Outfit' as a font-family
       },
       fontSize: {
-        'heading-l': ['40px', {
-          letterSpacing: '2.5px',
-          fontWeight: 700,
-          lineHeight: '48px',
-        }],
-        'heading-m': ['24px', {
-          letterSpacing: '1.5px',
-          fontWeight: 700,
-          lineHeight: '30px',
-        }],
-        'heading-s': ['20px', {
-          letterSpacing: '1.25px',
-          fontWeight: 700,
-          lineHeight: '24px',
-        }],
-        'heading-xs': ['16px', {
-          letterSpacing: '1px',
-          fontWeight: 700,
-          lineHeight: '20px',
-        }],
-        'body': ['14px', {
-          letterSpacing: '0.8px',
-          fontWeight: 400,
-          lineHeight: '30px',
-        }],
+        "heading-l": [
+          "2.5rem",
+          {
+            letterSpacing: "0.15625rem",
+            fontWeight: 700,
+            lineHeight: "3rem",
+          },
+        ],
+        "heading-m": [
+          "1.5rem",
+          {
+            letterSpacing: "0.09375rem",
+            fontWeight: 700,
+            lineHeight: "1.875rem",
+          },
+        ],
+        "heading-s": [
+          "1.25rem",
+          {
+            letterSpacing: "0.078125rem",
+            fontWeight: 700,
+            lineHeight: "1.5rem",
+          },
+        ],
+        "heading-xs": [
+          "1rem",
+          {
+            letterSpacing: "0.0625rem",
+            fontWeight: 700,
+            lineHeight: "1.25rem",
+          },
+        ],
+        body: [
+          "0.875rem",
+          {
+            letterSpacing: "0.05rem",
+            fontWeight: 400,
+            lineHeight: "1.875rem",
+          },
+        ],
       },
-    
+
       screens: {
         sm: "450px",
         md: "768px", // Change this to your desired value
@@ -64,5 +79,3 @@ export default {
   },
   plugins: [],
 };
-
-
