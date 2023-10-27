@@ -7,7 +7,7 @@ import Button from "./UI/Button";
 
 export default function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen px-10 font-outfit text-cl-silver text-body bg-cd-navy">
+    <div className="flex items-center min-w-[19rem] justify-center min-h-screen px-10 font-outfit text-cl-silver text-body bg-cd-navy">
       {/* <NewGameMenu /> */}
       <GameScreen />
     </div>
@@ -20,28 +20,22 @@ function GameScreen() {
       {/* hrader */}
       <div className="flex flex-row items-center justify-between">
         <Logo />
-        <div className="flex items-center justify-center h-12 gap-3 bg-cd-semi-navy w-36 shadow-i-navy-s rounded-xl">
-          <X className="w-5" />
+        <div className="flex m-auto  items-center aspect-[3] w-1/3 justify-center gap-3 bg-cd-semi-navy shadow-i-navy-s rounded-xl">
+          <X className="w-2/12 " />
           <h1 className="text-heading-xs">TURN</h1>
         </div>
-        <Button variant="secondary" color="blue" className="ml-7">
+        <Button variant="secondary" color="blue" className="md:ml-7">
           <X className="w-5" />
         </Button>
       </div>
 
       {/* grid */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="grid bg-cd-semi-navy place-content-center h-36 w-36 rounded-2xl shadow-i-navy">
-          <O className="w-16" />
-        </div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
-        <div className="p-4 bg-cd-semi-navy h-36 w-36 rounded-2xl shadow-i-navy"></div>
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div className=" bg-cd-semi-navy p-[15%] pb-[20%] flex items-center justify-center aspect-square rounded-2xl shadow-i-navy">
+            {i > 10 && <O />}
+          </div>
+        ))}
       </div>
     </div>
   );
