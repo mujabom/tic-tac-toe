@@ -4,7 +4,7 @@ import O from "../asset/icon-o.svg?react";
 import X from "../asset/icon-x.svg?react";
 import Logo from "../asset/logo.svg?react";
 
-export function NewGameMenu() {
+export function NewGameMenu({ start }: { start: () => void }) {
   const [player1Mark, setPlayer1Mark] = useState<"o" | "x">("o");
   function getClassNames(mark: "o" | "x") {
     return `xo-menu ${player1Mark === mark ? "active" : "inactive"}`;
@@ -13,7 +13,7 @@ export function NewGameMenu() {
   return (
     <div className="flex flex-col max-w-full gap-10 w-[29rem]">
       <div className="flex flex-row justify-center">
-        <Logo />
+        <Logo className="w-20" />
       </div>
       <div className="flex flex-col items-center justify-between gap-4 p-4 bg-cd-semi-navy rounded-2xl shadow-i-navy">
         <p className="text-heading-xs">PICK PLAYER 1’S MARK</p>
@@ -37,7 +37,7 @@ export function NewGameMenu() {
         <Button variant="primary" color="yellow" className="">
           {`NEW GAME (VS CPU)`}
         </Button>
-        <Button variant="primary" color="blue" className="">
+        <Button onClick={start} variant="primary" color="blue" className="">
           {`NEW GAME (VS PLAYER)`}
         </Button>
       </div>

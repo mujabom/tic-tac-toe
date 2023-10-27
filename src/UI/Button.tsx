@@ -21,7 +21,7 @@ export default function Button({
   const variantClass =
     variant === "primary"
       ? "text-heading-s rounded-3xl p-6 max-w-full"
-      : "text-heading-xs  p-3 rounded-[0.6rem] pb-4";
+      : "text-heading-xs  rounded-[0.6rem] ";
 
   function getShadow() {
     if (color === "yellow") {
