@@ -17,7 +17,6 @@ export function GameScreen() {
           <X className="w-5" />
         </Button>
       </div>
-
       {/* grid */}
       <div className="grid grid-cols-3 gap-4">
         {Array.from({ length: 9 }).map((_, i) => (
@@ -25,6 +24,27 @@ export function GameScreen() {
             {i % 2 == 0 && <O />}
           </div>
         ))}
+      </div>
+      {/* footer */}
+      <div className="flex justify-between">
+        <div className=" bg-cl-blue rounded-[15px] w-[30.4%]">
+          <div className=" text-cd-navy flex flex-col justify-center items-center">
+            <div className="text-center">X (YOU)</div>
+            <div className="text-heading-m">14</div>
+          </div>
+        </div>
+        <div className=" bg-cl-silver rounded-[15px] w-[30.4%]">
+          <div className=" text-cd-navy flex flex-col justify-center items-center">
+            <div className="text-center">TIES</div>
+            <div className="text-heading-m">0</div>
+          </div>
+        </div>
+        <div className=" bg-cl-yellow rounded-[15px] w-[30.4%]">
+          <div className=" text-cd-navy flex flex-col justify-center items-center">
+            <div className="text-center">O (CPU)</div>
+            <div className="text-heading-m">6</div>
+          </div>
+        </div>
       </div>
     </div>
   );

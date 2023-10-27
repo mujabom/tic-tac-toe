@@ -1,12 +1,11 @@
 import { GameScreen } from "./components/GameScreen";
-import { NewGameMenu } from "./components/NewGameMenu";
 
 export default function App() {
   return (
     <div className="flex items-center min-w-[19rem] justify-center min-h-screen px-10 font-outfit text-cl-silver text-body bg-cd-navy">
       {/* <NewGameMenu /> */}
       <GameScreen />
-      <NotificationScreen />
+      {/* <NotificationScreen /> */}
     </div>
   );
 }

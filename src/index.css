@@ -47,3 +47,20 @@
 
 }
 
+@media (max-width: 350px) {
+  .text-heading-l {
+    font-size: 1rem; /* adjust as needed */
+  }
+
+  .text-heading-m {
+    font-size: 1rem; /* adjust as needed */
+  }
+
+  .text-heading-s {
+    font-size: 0.875rem; /* adjust as needed */
+  }
+
+  .text-heading-xs {
+    font-size: 0.625rem; /* adjust as needed */
+  }
+}
