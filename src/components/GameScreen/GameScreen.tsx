@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BottomBar } from "./BottomBar";
 import XOGrid from "./GameGrid";
 import { TopBar } from "./TopBar";
-import NotificationScreen from "./NotificationScreen";
 
 export function GameScreen({
   gameState,
@@ -11,7 +10,6 @@ export function GameScreen({
   gameState: gameState;
   updateGameState: (clicked: { x: number; y: number }) => void;
 }) {
-  const [showNotification, setShowNotification] = useState(true);
 
   return (
     <><div className="flex max-w-full flex-col md:w-[29rem]">
@@ -22,9 +20,8 @@ export function GameScreen({
       {/* footer */}
       {<BottomBar score={gameState.score} />}
     </div>
-    {showNotification && <NotificationScreen />}
     </>
-  );
+  )
 }
 
 
