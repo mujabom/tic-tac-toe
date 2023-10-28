@@ -1,24 +1,16 @@
 import { useState } from "react";
-import { GameScreen } from "./components/GameScreen";
 import { NewGameMenu } from "./components/NewGameMenu";
-type gameState = {
-  turn: "X" | "O";
-  grid: ("X" | "O" | "")[][];
-  score: {
-    X: number;
-    O: number;
-    tie: number;
-  };
-};
+import { GameScreen } from "./components/GameScreen/GameScreen";
+
 
 export default function App() {
   const [pageState, setPageState] = useState<"menu" | "game">("menu");
   const [gameState, setGameState] = useState<gameState>({
     turn: "X",
     grid: [
-      ["", "", ""],
-      ["", "", ""],
-      ["", "", ""],
+      ["", "", "O"],
+      ["X", "X", ""],
+      ["", "O", ""],
     ],
     score: {
       X: 0,
@@ -32,7 +24,7 @@ export default function App() {
   return (
     <div className="flex items-center min-w-[19rem] justify-center min-h-screen px-10 font-outfit text-cl-silver text-body bg-cd-navy">
       {pageState === "menu" && <NewGameMenu start={startGame} />}
-      {pageState === "game" && <GameScreen />}
+      {pageState === "game" && <GameScreen gameState={gameState} />}
       {/* <NotificationScreen /> */}
     </div>
   );
