@@ -1,12 +1,14 @@
 type gameState = {
     turn: Turn
     grid: Grid;
-    score: {
-      X: number;
-      O: number;
-      tie: number;
-    };
+    score: Score;
+    player1: Turn;
   };
 type Cell = "X" | "O" | "";
   type Grid = [Cell, Cell, Cell][];
   type Turn = "X" | "O";
+  type Score = {
+    X: number;
+    O: number;
+    tie: number;
+  };

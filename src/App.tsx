@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { NewGameMenu } from './components/NewGameMenu';
 import { GameScreen } from './components/GameScreen/GameScreen';
+import { NewGameMenu } from './components/NewGameMenu';
 
 export default function App() {
   const [pageState, setPageState] = useState<'menu' | 'game'>('menu');
@@ -16,6 +16,7 @@ export default function App() {
       O: 0,
       tie: 0,
     },
+    player1: 'X',
   });
   function updateGameState(clicked: { x: number; y: number }) {
     setGameState((prev) => {
@@ -37,7 +38,13 @@ export default function App() {
     });
   }
 
-  function startGame() {
+  function startGame(player1Mark:Turn) {
+    setGameState((prev) => {
+      return {
+        ...prev,
+        player1: player1Mark,
+      };
+    });
     setPageState('game');
   }
   return (
@@ -46,15 +53,8 @@ export default function App() {
       {pageState === 'game' && (
         <GameScreen gameState={gameState} updateGameState={updateGameState} />
       )}
-      {/* <NotificationScreen /> */}
     </div>
   );
 }
 
-function NotificationScreen() {
-  return (
-    <div className="absolute h-screen w-screen bg-black bg-opacity-50">
-      <div className="absolute top-1/3 h-1/3 w-screen bg-cd-semi-navy"></div>
-    </div>
-  );
-}
+

@@ -4,9 +4,9 @@ import O from "../asset/icon-o.svg?react";
 import X from "../asset/icon-x.svg?react";
 import Logo from "../asset/logo.svg?react";
 
-export function NewGameMenu({ start }: { start: () => void }) {
-  const [player1Mark, setPlayer1Mark] = useState<"o" | "x">("o");
-  function getClassNames(mark: "o" | "x") {
+export function NewGameMenu({ start }: { start: (playr:Turn) => void }) {
+  const [player1Mark, setPlayer1Mark] = useState<Turn>("O");
+  function getClassNames(mark: Turn) {
     return `xo-menu ${player1Mark === mark ? "active" : "inactive"}`;
   }
 
@@ -19,14 +19,14 @@ export function NewGameMenu({ start }: { start: () => void }) {
         <p className="text-heading-xs">PICK PLAYER 1’S MARK</p>
         <div className="flex w-full justify-center rounded-xl bg-cd-navy p-2">
           <button
-            onClick={() => setPlayer1Mark("x")}
-            className={getClassNames("x")}
+            onClick={() => setPlayer1Mark("X")}
+            className={getClassNames("X")}
           >
             <X className="w-8" />
           </button>
           <button
-            onClick={() => setPlayer1Mark("o")}
-            className={getClassNames("o")}
+            onClick={() => setPlayer1Mark("O")}
+            className={getClassNames("O")}
           >
             <O className="w-8" />
           </button>
@@ -37,7 +37,7 @@ export function NewGameMenu({ start }: { start: () => void }) {
         <Button variant="primary" color="yellow" className="">
           {`NEW GAME (VS CPU)`}
         </Button>
-        <Button onClick={start} variant="primary" color="blue" className="">
+        <Button onClick={()=>start(player1Mark)} variant="primary" color="blue" className="">
           {`NEW GAME (VS PLAYER)`}
         </Button>
       </div>
