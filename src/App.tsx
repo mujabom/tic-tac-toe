@@ -8,9 +8,9 @@ export default function App() {
   const [gameState, setGameState] = useState<gameState>({
     turn: "X",
     grid: [
-      ["", "", "O"],
-      ["X", "X", ""],
-      ["", "O", ""],
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
     ],
     score: {
       X: 0,
@@ -18,13 +18,38 @@ export default function App() {
       tie: 0,
     },
   });
+  function updateGameState(clicked: { x: number; y: number }) {
+    setGameState((prev) => {
+
+      const newGrid = prev.grid.map((row, x) =>
+        row.map((cell, y) => {
+          if (x === clicked.x && y === clicked.y) {
+            return prev.turn;
+          } else {
+            return cell;
+          }
+        }
+        )
+      );
+
+      return {
+        ...prev,
+        grid: newGrid as Grid,
+        turn: prev.turn === "X" ? "O" : "X",
+      };
+      
+
+
+    });
+  }
+  
   function startGame() {
     setPageState("game");
   }
   return (
     <div className="flex items-center min-w-[19rem] justify-center min-h-screen px-10 font-outfit text-cl-silver text-body bg-cd-navy">
       {pageState === "menu" && <NewGameMenu start={startGame} />}
-      {pageState === "game" && <GameScreen gameState={gameState} />}
+      {pageState === "game" && <GameScreen gameState={gameState} updateGameState={updateGameState}/>}
       {/* <NotificationScreen /> */}
     </div>
   );

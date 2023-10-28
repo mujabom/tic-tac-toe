@@ -8,7 +8,7 @@ import Logo from "../../asset/logo.svg?react";
 import XOGrid from "./GameGrid";
 
 
-export function GameScreen({ gameState }: { gameState: gameState}) {
+export function GameScreen({ gameState,updateGameState }: { gameState: gameState,updateGameState:(clicked: { x: number; y: number })=>void}) {
   return (
     <div className="flex flex-col max-w-full md:w-[29rem]">
       {/* hrader */}
@@ -29,7 +29,7 @@ export function GameScreen({ gameState }: { gameState: gameState}) {
         </div>
       </div>
       {/* grid */}
-      <XOGrid gameState={gameState} />
+      <XOGrid gameState={gameState} updateGameState={updateGameState}/>
       {/* footer */}
       <div className="flex justify-between">
         <div className=" bg-cl-blue rounded-[15px] w-[30.4%] text-cd-navy flex flex-col justify-center items-center">
