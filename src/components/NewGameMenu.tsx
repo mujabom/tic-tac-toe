@@ -11,13 +11,13 @@ export function NewGameMenu({ start }: { start: () => void }) {
   }
 
   return (
-    <div className="flex flex-col max-w-full gap-10 w-[29rem]">
+    <div className="flex w-[29rem] max-w-full flex-col gap-10">
       <div className="flex flex-row justify-center">
         <Logo className="w-20" />
       </div>
-      <div className="flex flex-col items-center justify-between gap-4 p-4 bg-cd-semi-navy rounded-2xl shadow-i-navy">
+      <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-cd-semi-navy p-4 shadow-i-navy">
         <p className="text-heading-xs">PICK PLAYER 1’S MARK</p>
-        <div className="flex justify-center w-full p-2 bg-cd-navy rounded-xl">
+        <div className="flex w-full justify-center rounded-xl bg-cd-navy p-2">
           <button
             onClick={() => setPlayer1Mark("x")}
             className={getClassNames("x")}
