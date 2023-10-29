@@ -6,7 +6,13 @@ import Restart from "../../asset/icon-restart.svg?react";
 import X from "../../asset/icon-x.svg?react";
 import Logo from "../../asset/logo.svg?react";
 
-export function TopBar({ turn }: { turn: Turn }) {
+export function TopBar({
+  turn,
+  resetGameState,
+}: {
+  turn: Turn;
+  resetGameState: () => void;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,15 +36,25 @@ export function TopBar({ turn }: { turn: Turn }) {
       </div>
       {open && (
         <NotificationScreen onClose={() => setOpen(false)} onConfirm={() => {}}>
-          <div className="flex flex-col gap-8 py-16">
+          <div className="flex flex-col gap-8 py-6 sm:py-10 md:py-16">
             <div className=" text-center text-heading-l text-cl-silver">
               RESTART GAME?
             </div>
             <div className="flex flex-row items-center justify-center gap-4">
-              <Button variant="secondary" color="blue" className="p-4">
+              <Button
+                onClick={() => setOpen(false)}
+                variant="secondary"
+                color="blue"
+                className="p-4"
+              >
                 NO, CANCEL
               </Button>
-              <Button variant="secondary" color="yellow" className="p-4">
+              <Button
+                onClick={()=>{resetGameState();setOpen(false)}}
+                variant="secondary"
+                color="yellow"
+                className="p-4"
+              >
                 YES, RESTART
               </Button>
             </div>
