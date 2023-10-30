@@ -28,7 +28,7 @@ export default function XOGrid({
   }
   function getClasses(x: number, y: number, cellSelected: Cell) {
     const winnerClass = getWinnerClass(x, y, cellSelected);
-    console.log(winnerClass);
+    //console.log(winnerClass);
     const cellClass = cellSelected === "X" ? 'text-cl-blue' : 'text-cl-yellow';
     return twMerge(classes,cellClass, winnerClass);
   }

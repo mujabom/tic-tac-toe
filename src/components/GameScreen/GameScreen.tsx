@@ -19,7 +19,8 @@ export function GameScreen({
       {/* grid */}
       <XOGrid gameState={gameState} updateGameState={updateGameState} />
       {/* footer */}
-      {<BottomBar score={gameState.score} />}
+      {<BottomBar gameState={gameState} />}
+    
     </div>
     </>
   )

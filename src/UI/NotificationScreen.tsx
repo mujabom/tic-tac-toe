@@ -1,9 +1,7 @@
 import Modal from "@mui/material/Modal";
 type Props = {
   onClose: () => void;
-  onConfirm: () => void;
   children?: React.ReactNode;
-  className?: string;
 };
 
 export default function NotificationScreen({ onClose ,children}: Props) {

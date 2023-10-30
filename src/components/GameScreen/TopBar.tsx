@@ -35,7 +35,7 @@ export function TopBar({
         </div>
       </div>
       {open && (
-        <NotificationScreen onClose={() => setOpen(false)} onConfirm={() => {}}>
+        <NotificationScreen onClose={() => setOpen(false)} >
           <div className="flex flex-col gap-8 py-6 sm:py-10 md:py-16">
             <div className=" text-center text-heading-l text-cl-silver">
               RESTART GAME?

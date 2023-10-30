@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'Outfit', sans-serif !important;
+}
+
 .xo-menu {
   @apply flex justify-center w-1/2 p-3 rounded-xl;
 }
